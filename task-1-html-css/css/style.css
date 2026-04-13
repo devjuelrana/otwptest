@@ -119,7 +119,7 @@ ol {
 .h2 {
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: 48px;
+    font-size: 56px;
     line-height: 68px;
     letter-spacing: 0;
 }
@@ -282,6 +282,30 @@ ol {
         font-size: 18px;
         line-height: 28px;
     }
+
+    .hero_section .hero_content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pre-header {
+        margin: 0 auto;
+    }
+
+    .text_area h1.title {
+        font-size: 42px;
+        padding: 7px 10px 0;
+        margin: 0 auto;
+    }
+
+    .text_area p.description {
+        padding: 0 34px;
+    }
+
+    a.primary_btn {
+        margin: 30px auto 0;
+    }
+
 }
 
 /* Mobile (320px) */
@@ -339,6 +363,24 @@ ol {
     .btn-text {
         font-size: 16px;
         line-height: 24px;
+    }
+
+    .text_area h1.title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .text_area p.description {
+        padding: 0;
+        margin-top: 12px;
+    }
+
+    a.primary_btn {
+        margin: 20px auto 0;
+    }
+
+    .hero_section div.hero_content {
+        gap: 40px;
     }
 }
 
@@ -418,6 +460,7 @@ ol {
 .text_area .title {
     color: #95440B;
     margin-top: 7px;
+    font-size: 48px;
 }
 
 .text_area .description {
@@ -432,7 +475,7 @@ ol {
     align-items: center;
     gap: 18px;
     margin-top: 40px;
-    border: 3px solid;
+    border: 2px solid;
     border-color: #424448;
     padding: 0 0 0 20px;
     background-color: #424448;
@@ -466,6 +509,26 @@ ol {
     padding: 15px;
 }
 
+.primary_btn.style2 {
+    background: #2CD080;
+    border-color: #2CD080;
+    color: var(--color-text);
+}
+
+.primary_btn.style2:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    border-color: #2CD080;
+}
+
+.primary_btn.style2:hover .arrow {
+    background-color: #2CD080;
+}
+
+.primary_btn.style2:hover .arrow img {
+    filter: brightness(0);
+}
+
 .payment_options {
     padding: 40px 0 125px;
 }
@@ -486,7 +549,7 @@ ol {
     flex: 1;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 24px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -556,6 +619,10 @@ ol {
     z-index: 1;
 }
 
+/* Hero section css end */
+
+/* Our Practice Section css start  */
+
 .our_practice_section {
     background-color: var(--color-primary);
     padding-top: 40px;
@@ -573,10 +640,172 @@ ol {
     border-bottom: 1px solid rgb(255, 255, 255, 0.2);
 }
 
-.section_header .title {
-    color: #FFDC49;
-    margin-bottom: 40px;
+.section_header .pre-header.style2 {
+    color: var(--color-primary);
+    border-bottom: 1px solid rgb(3, 7, 18, 0.2);
 }
 
+.section_header .title {
+    color: #FFDC49;
+}
+
+.our_practice_section .image_area {
+    padding: 60px 0 60px;
+}
+
+.image_area .images {
+    display: flex;
+    gap: 8px;
+}
+
+.image_area .images .image_item:first-child img {
+    border-bottom-left-radius: 120px;
+}
+
+.image_area .images .image_item:last-child img {
+    border-top-right-radius: 120px;
+}
+
+.conetent_area {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.left_area {
+    flex: 1;
+}
+
+.left_area .description {
+    color: var(--color-white);
+    padding-right: 22px;
+}
+
+.right_area {
+    flex: 1;
+}
+
+.right_area {}
+
+.right_area .main_image {
+    position: relative;
+}
+
+.right_area .main_image img {
+    border-top-right-radius: 120px;
+    border-bottom-left-radius: 120px;
+}
+
+.right_area .main_image .top_shape {
+    position: absolute;
+    top: -4px;
+    left: 40px;
+}
+
+.right_area .main_image .bottom_shape {
+    position: absolute;
+    bottom: -6px;
+    right: 40px;
+}
+
+/* Our Practice Section css end  */
+
+/* Doctor Section css start  */
+.doctor_section {
+    position: relative;
+    overflow: hidden;
+    padding: var(--section-padding) 0;
+}
+
+.doctor_section .section_header {
+    padding-top: 220px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.doctor_section .section_header .title {
+    color: var(--color-black);
+    margin-bottom: 22px;
+}
+
+.doctor_section .doctor_info {
+    padding: 60px 0;
+}
+
+.doctor_section .doctor_info {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.doctor_info .image_area {
+    flex: 1.15;
+    position: relative;
+}
+
+.doctor_info .image_area .top_shape {
+    position: absolute;
+    top: -2px;
+    right: 56px;
+}
+
+.doctor_section .image_area .bottom_shape {
+    position: absolute;
+    bottom: -3px;
+    left: 56px;
+}
+
+.doctor_info .image_area img {
+    border-radius: 40px;
+}
+
+.image_area .text_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 257px;
+    background-color: #2CD080;
+    padding: 30px 24px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    text-align: center;
+}
+
+.text_box p {
+    color: var(--color-black);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+
+.doctor_info .content_area {
+    flex: 1;
+}
+
+.doctor_info .content_area .description {
+    margin: 30px 0 25px;
+}
+
+.section_top_shape {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.section_top_shape img {
+    width: 100%;
+    height: auto;
+}
+
+.doctor_section .section_bottom_shape {
+    position: absolute;
+    top: 0;
+    left: 85px;
+    width: auto;
+}
 
 /* END YOUR CSS HERE */
