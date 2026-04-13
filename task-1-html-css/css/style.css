@@ -271,6 +271,7 @@ ol {
     .body-1 {
         font-size: 18px;
         line-height: 28px;
+        text-align: center;
     }
 
     .body-2 {
@@ -283,9 +284,10 @@ ol {
         line-height: 28px;
     }
 
-    .hero_section .hero_content {
+    .hero_section div.hero_content {
         flex-direction: column;
         text-align: center;
+        gap: 40px;
     }
 
     .pre-header {
@@ -304,6 +306,58 @@ ol {
 
     a.primary_btn {
         margin: 30px auto 0;
+    }
+
+    div.payment_options {
+        padding: 10px 0 42px;
+    }
+
+    .payment_options .card_items div.card {
+        padding: 40px 18px;
+        gap: 10px;
+    }
+
+    .card_content h6 {
+        font-size: 16px;
+    }
+
+    section.our_practice_section {
+        padding-top: 20px;
+    }
+
+    .our_practice_section div.image_area {
+        padding: 41px 0 40px;
+    }
+
+    div.conetent_area {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    p.body-1.description {
+        padding: 0 13px;
+    }
+
+    .doctor_section div.section_header {
+        padding-top: 80px;
+    }
+
+    .doctor_section div.doctor_info {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .doctor_info .content_area {
+        text-align: center;
+    }
+
+    .doctor_info .content_area p.description {
+        margin: 20px 0 20px;
     }
 
 }
@@ -381,6 +435,25 @@ ol {
 
     .hero_section div.hero_content {
         gap: 40px;
+    }
+
+    .payment_options div.card_items {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .payment_options .card_items div.card {
+        width: 100%;
+    }
+
+    .doctor_section div.section_header {
+        padding-top: 30px;
+    }
+
+    .image_area div.text_box {
+        width: 230px;
+        padding: 30px 12px;
     }
 }
 
