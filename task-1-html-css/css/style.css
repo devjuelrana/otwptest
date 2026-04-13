@@ -59,13 +59,13 @@ ol {
 
     /* Colors — inspect the Figma color palette to get exact hex values */
     /* TODO: Fill in the exact colors from the Figma file */
-    --color-primary: #00BC4D;
+    --color-primary: #0A5D2E;
     /* Main brand color (inspect from Figma) */
     --color-secondary: #EC9F05;
     /* Secondary color (inspect from Figma) */
     --color-tertiary: #B7E807;
     /* Tertiary color (inspect from Figma) */
-    --color-accent: #2CD080;
+    --color-accent: #00BC4D;
     /* Accent/highlight color (inspect from Figma) */
     --color-text: #030712;
     /* Main text color (inspect from Figma) */
@@ -364,6 +364,20 @@ ol {
     z-index: -1;
 }
 
+.section_bottom_shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.section_bottom_shape img {
+    width: 100%;
+    height: auto;
+}
+
+
 .hero_section .hero_content {
     display: flex;
     align-items: center;
@@ -418,11 +432,27 @@ ol {
     align-items: center;
     gap: 18px;
     margin-top: 40px;
-    padding: 4px 4px 4px 20px;
+    border: 3px solid;
+    border-color: #424448;
+    padding: 0 0 0 20px;
     background-color: #424448;
     color: var(--color-white);
     border-radius: var(--radius-full);
     transition: var(--transition);
+}
+
+.primary_btn:hover {
+    background-color: transparent;
+    color: #424448;
+    border-color: #030712;
+}
+
+.primary_btn:hover .arrow {
+    background-color: #030712;
+}
+
+.primary_btn:hover .arrow img {
+    filter: brightness(10);
 }
 
 .primary_btn .arrow {
@@ -435,5 +465,118 @@ ol {
     display: block;
     padding: 15px;
 }
+
+.payment_options {
+    padding: 40px 0 125px;
+}
+
+.payment_options .card_items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.payment_options .card_items .card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 60px 40px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.payment_options .card_items .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1);
+    transition: all 0.4s ease;
+}
+
+.card_items .card:hover::before {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+}
+
+.card_items .card.item1 {
+    background: var(--color-accent);
+}
+
+.card_items .card.item2 {
+    background: var(--color-tertiary);
+}
+
+.card_items .card.item3 {
+    background: var(--color-secondary);
+}
+
+.payment_options .card_items .card.item1::before {
+    background-image: url('../images/card1.webp');
+}
+
+.payment_options .card_items .card.item2::before {
+    background-image: url('../images/card2.webp');
+}
+
+.payment_options .card_items .card.item3::before {
+    background-image: url('../images/card3.webp');
+}
+
+.card_content h6 {
+    text-transform: uppercase;
+    color: #030712;
+}
+
+.card .top_shape {
+    position: absolute;
+    top: 0;
+    right: 32px;
+    z-index: 1;
+}
+
+.card .bottom_shape {
+    position: absolute;
+    bottom: 0;
+    left: 28px;
+    z-index: 1;
+}
+
+.our_practice_section {
+    background-color: var(--color-primary);
+    padding-top: 40px;
+}
+
+.section_header {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section_header .pre-header {
+    color: var(--color-white);
+    margin: 0 auto;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+.section_header .title {
+    color: #FFDC49;
+    margin-bottom: 40px;
+}
+
 
 /* END YOUR CSS HERE */
