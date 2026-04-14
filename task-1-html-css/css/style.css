@@ -820,6 +820,8 @@ ol {
 .doctor_info .image_area {
     flex: 1.15;
     position: relative;
+    overflow: hidden;
+    border-radius: 40px;
 }
 
 .doctor_info .image_area .top_shape {
