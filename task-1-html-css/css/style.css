@@ -455,6 +455,12 @@ ol {
         width: 230px;
         padding: 30px 12px;
     }
+
+    .image_area div.images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 

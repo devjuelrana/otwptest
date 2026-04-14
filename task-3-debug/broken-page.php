@@ -43,7 +43,7 @@ $testimonials = [
 
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $practice_info['name']; ?></title>
+    <title><?php echo htmlspecialchars($practice_info['name']); ?></title>
     <style>
         * {
             margin: 0;
@@ -176,7 +176,7 @@ $testimonials = [
         <div class="services-grid">
             <?php foreach ($services as $service) { ?>
                 <div class="service-card">
-                    <div class="icon"><?php echo $service['icon']; ?></div>
+                    <div class="icon"><?php echo htmlspecialchars($service['icon']); ?></div>
                     <h3><?php echo htmlspecialchars($service['title']); ?></h3>
                     <p><?php echo htmlspecialchars($service['desc']); ?></p>
                 </div>
@@ -210,4 +210,5 @@ $testimonials = [
     </footer>
 
 </body>
+
 </html>
