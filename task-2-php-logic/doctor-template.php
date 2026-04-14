@@ -1,4 +1,5 @@
 <?php
+
 /**
  * TASK 2 — PHP Template Logic
  *
@@ -23,19 +24,22 @@
 // DO NOT MODIFY THIS FUNCTION
 // ============================================
 if (!function_exists('esc_html')) {
-    function esc_html($text) {
+    function esc_html($text)
+    {
         return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
     }
 }
 
 if (!function_exists('esc_url')) {
-    function esc_url($url) {
+    function esc_url($url)
+    {
         return filter_var($url, FILTER_SANITIZE_URL);
     }
 }
 
 if (!function_exists('esc_attr')) {
-    function esc_attr($text) {
+    function esc_attr($text)
+    {
         return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
     }
 }
@@ -108,22 +112,29 @@ $doctors = [
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Doctors</title>
     <style>
         /* Add basic styling if you want — this is optional */
-        body { font-family: 'Lato', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        body {
+            font-family: 'Lato', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
     </style>
 </head>
+
 <body>
 
-<section class="doctors-section">
-    <h2>Meet Our Doctors</h2>
+    <section class="doctors-section">
+        <h2>Meet Our Doctors</h2>
 
-    <!-- START YOUR PHP LOOP HERE -->
-    <!--
+        <!-- START YOUR PHP LOOP HERE -->
+        <!--
         For each doctor, output:
         - A container div with class "doctor-card"
         - An img tag with the photo (use esc_url for src, esc_attr for alt)
@@ -134,12 +145,27 @@ $doctors = [
 
         IMPORTANT: Escape ALL dynamic output!
     -->
+        <?php foreach ($doctors as $doctor) : ?>
+            <div class="doctor-card">
+                <img src="<?php echo esc_url($doctor['photo_url']); ?>" alt="<?php echo esc_attr($doctor['name']); ?>">
+                <h3><?php echo esc_html($doctor['name']); ?></h3>
+                <p class="specialty"><?php echo esc_html($doctor['specialty']); ?></p>
+                <p class="experience"><?php echo esc_html($doctor['experience']); ?></p>
+                <p class="bio"><?php echo esc_html($doctor['bio']); ?></p>
+                <ul class="credentials">
+                    <?php foreach ($doctor['credentials'] as $credential) : ?>
+                        <li><?php echo esc_html($credential); ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endforeach; ?>
 
 
 
-    <!-- END YOUR PHP LOOP HERE -->
+        <!-- END YOUR PHP LOOP HERE -->
 
-</section>
+    </section>
 
 </body>
+
 </html>
